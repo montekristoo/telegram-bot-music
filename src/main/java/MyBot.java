@@ -153,10 +153,12 @@ public class MyBot extends TelegramLongPollingBot {
         String title = document.title().replaceAll(" - YouTube$", "");
         title = title.replace("\"", "");
 
+        System.out.println(title);
+
            File file = new File(title + ".mp3");
            String directory = System.getProperty("user.dir");
             YoutubeDLRequest request = new YoutubeDLRequest(videoUrl, directory);
-            YoutubeDL.setExecutablePath("F:\\hcj\\TelegramBot1\\yt-dlp.exe");
+            YoutubeDL.setExecutablePath("C:\\Users\\victo\\Desktop\\Music\\yt-dlp.exe");
             request.setOption("no-mark-watched");
             request.setOption("ignore-errors");
             request.setOption("no-playlist");
